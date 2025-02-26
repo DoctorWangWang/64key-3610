@@ -130,7 +130,7 @@
                    &kp GRAVE  &kp LGUI  &kp BSPC   &kp SPACE     &none   &kp RET  &kp LBKT   &kp RBKT
                    &kp LALT   &kp LALT  &kp LCTRL  &lt 3 DELETE  &none   &none    &mo 1      &kp LALT
             >;
-  sensor-bindings = <&scroll_encoder &scroll_encoder>;
+  sensor-bindings = <&scroll_encoder>;
         };
 
         number_layer {
@@ -143,7 +143,7 @@
                &trans   &trans   &trans   &trans  &none   &none      &kp KP_N0  &kp KP_DOT
                &trans   &none    &trans   &trans  &kp N1  &kp N1     &kp N1     &kp N1
             >;
-sensor-bindings = <&inc_dec_kp SCRL_DOWN SCRL_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         symbol_layer {
