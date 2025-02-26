@@ -160,21 +160,8 @@
             >;
         };
     };
- rgb_ug {
-        compatible = "zmk,rgb-underglow";
-        label = "RGB_UNDERGLOW";
-        status = "okay";
-        chain-length = <32>; // 根据你的键盘LED数量调整
-    color-mapping = <LED_COLOR_ID_GREEN
-                         LED_COLOR_ID_RED
-                         LED_COLOR_ID_BLUE>;
-        layer-colors = <
-            &rgb_ug RGB_COLOR_HSB(255, 0, 0)    // 默认层
-            &rgb_ug RGB_COLOR_HSB(0, 255, 0)    // 数字层
-            &rgb_ug RGB_COLOR_HSB(0, 0, 255)    // 符号层
-            &rgb_ug RGB_COLOR_HSB(255, 255, 0)  // 热键层
-        >;
-};
+
+
    
 };
 
