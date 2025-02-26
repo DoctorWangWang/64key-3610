@@ -141,6 +141,23 @@
             >;
         };
     };
+ rgb_ug {
+        compatible = "zmk,rgb-underglow";
+        label = "RGB_UNDERGLOW";
+        status = "okay";
+        chain-length = <32>; // 根据你的键盘LED数量调整
+        color-map = /bits/ 8 <
+            RGB_COLOR(255, 0, 0)    // 默认层颜色 (红色)
+            RGB_COLOR(0, 255, 0)    // 数字层颜色 (绿色)
+            RGB_COLOR(0, 0, 255)    // 符号层颜色 (蓝色)
+            RGB_COLOR(255, 255, 0)  // 热键层颜色 (黄色)
+        >;
+        layer-colors = <
+            &rgb_ug RGB_COLOR(255, 0, 0)    // 默认层
+            &rgb_ug RGB_COLOR(0, 255, 0)    // 数字层
+            &rgb_ug RGB_COLOR(0, 0, 255)    // 符号层
+            &rgb_ug RGB_COLOR(255, 255, 0)  // 热键层
+        >;
 
    
 };
