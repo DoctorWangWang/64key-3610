@@ -27,6 +27,15 @@
             tapping-term-ms = <200>;
             bindings = <&kp ESC>, <&kp TAB>;
         };
+ rgb_layer: rgb_layer {
+            compatible = "zmk,behavior-rgb-layer";
+            label = "RGB_LAYER";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(0, 100, 50)>,  // 默认层颜色
+                       <&rgb_ug RGB_COLOR_HSB(120, 100, 50)>, // 数字层颜色
+                       <&rgb_ug RGB_COLOR_HSB(240, 100, 50)>, // 符号层颜色
+                       <&rgb_ug RGB_COLOR_HSB(60, 100, 50)>;  // 热键层颜色
+        };
     };
 
     macros {
@@ -37,26 +46,7 @@
             #binding-cells = <0>;
             bindings = <&kp N1 &kp N3 &kp N5 &kp N1>;
         };
-     To1_macro: To1_macro {
-        compatible = "zmk,behavior-macro";
-        label = "To1_macro";
-        #binding-cells = <0>;
-        bindings = <&rgb_ug RGB_EFF>,<&rgb_ug RGB_COLOR_HSB(128,100,50)>,<&to 1>;
-    };
-  
-    To0_macro: To0_macro {
-        compatible = "zmk,behavior-macro";
-        label = "To0_macro";
-        #binding-cells = <0>;
-        bindings = <&rgb_ug RGB_EFR>,<&to 0>;
-    };
 
-     To2_macro: To2_macro {
-        compatible = "zmk,behavior-macro";
-        label = "To2_macro";
-        #binding-cells = <0>;
-        bindings = <&to 2>, <&macro_wait_time 30>,<&rgb_ug RGB_COLOR_HSB(250,100,50)>;
-    };
 
 
 
@@ -158,4 +148,16 @@
             >;
         };
     };
+ // 绑定层状态到RGB行为
+    layer_indicator {
+        compatible = "zmk,layer-indicator";
+        layer-states = <
+            &rgb_layer DEFAULT
+            &rgb_layer NUMBER
+            &rgb_layer SYMBOL
+            &rgb_layer HOTKEY
+        >;
+    };
 };
+
+
