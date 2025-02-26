@@ -33,8 +33,8 @@
 };
 
 &msc {
-    acceleration-exponent = <0>;      // 0
-    time-to-max-speed-ms = <0>;       // 300
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <40>;       // 300
     delay-ms = <0>;                   // 0
 };
 
