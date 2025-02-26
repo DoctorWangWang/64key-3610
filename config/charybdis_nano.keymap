@@ -173,16 +173,8 @@
             >;
         };
     };
- // 绑定层状态到RGB行为
-    layer_indicator {
-        compatible = "zmk,layer-indicator";
-        layer-states = <
-            &rgb_layer DEFAULT
-            &rgb_layer NUMBER
-            &rgb_layer SYMBOL
-            &rgb_layer HOTKEY
-        >;
-    };
+
+   
 };
 
 
