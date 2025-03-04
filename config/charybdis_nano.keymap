@@ -32,12 +32,25 @@
     };
 
     macros {
-        macro_phone: macro_phone {
-            // 1351
-            label = "MACRO_PHONE";
+         L_CLK: L_CLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N1 &kp N3 &kp N5 &kp N1>;
+            bindings = <&mkp LCLK>;
+            label = "L_CLK";
+        };
+
+        M_CLK: M_CLK {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "M_CLK";
+        };
+
+        R_CLK: R_CLK {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "R_CLK";
         };
 
    To1_macro: To1_macro {
