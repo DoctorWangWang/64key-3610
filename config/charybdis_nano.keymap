@@ -18,89 +18,32 @@
 
 / {
     behaviors {
+    
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp ESC>, <&kp TAB>;
-        };
-    };
-
-    behaviors {
-        as: auto_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "AUTO_SHIFT";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        modcp: mod_copy {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MOD_COPY";
-            #binding-cells = <0>;
-            bindings = <&as LS(C) C>, <&kp C>;
-
-            mods = <(LGUI | RGUI)>;
-        };
-
-        ltq: ltq {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LTQ";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-
-            quick-tap-ms = <200>;
-            global-quick-tap;
-            retro-tap;
-        };
-
-        td1: td1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD1";
-            #binding-cells = <0>;
-            bindings = <&tog 1>, <&tog 3>;
-
-            tapping-term-ms = <200>;
-        };
-
-        td2: td2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD2";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&lt 2 SPACE>, <&kp SPACE>;
-        };
-    };
-
-  macros {
-        L_CLK: L_CLK {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp LCLK>;
             label = "L_CLK";
-        };
-
-        M_CLK: M_CLK {
-            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp LCLK>, <&mkp LCLK>;
+        };
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
             label = "M_CLK";
-        };
-
-        R_CLK: R_CLK {
-            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp MCLK>, <&mkp MCLK>;
+        };
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
             label = "R_CLK";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp RCLK>, <&mkp RCLK>;
         };
     };
+
+ 
+
 
     combos {
         compatible = "zmk,combos";
