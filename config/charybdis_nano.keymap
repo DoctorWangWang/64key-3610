@@ -20,38 +20,34 @@
 
 / {
     behaviors {
+
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
+            label = "L_CLK";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp ESC>, <&kp TAB>;
+            bindings = <&mkp LCLK>, <&mkp LCLK>;
+        };
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "M_CLK";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp MCLK>, <&mkp MCLK>;
+        };
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "R_CLK";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp RCLK>, <&mkp RCLK>;
         };
 
 
     };
 
     macros {
-         L_CLK: L_CLK {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp LCLK>;
-            label = "L_CLK";
-        };
-
-        M_CLK: M_CLK {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "M_CLK";
-        };
-
-        R_CLK: R_CLK {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "R_CLK";
-        };
+      
 
    To1_macro: To1_macro {
         compatible = "zmk,behavior-macro";
