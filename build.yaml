@@ -14,13 +14,13 @@
 ---
 include:
   - board: nice_nano_v2
-  - snippets: nrf52840-nosd
+    snippet: nrf52840-nosd
     shield: charybdis_nano_left
   - board: nice_nano_v2
-  - snippets: nrf52840-nosd
+    snippet: nrf52840-nosd
     shield: charybdis_nano_right
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
   - board: nice_nano_v2
-  - snippets: nrf52840-nosd
+    snippet: nrf52840-nosd
     shield: settings_reset
