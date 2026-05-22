@@ -9,6 +9,9 @@
 
 #include <behaviors/runtime-input-processor.dtsi>
 
+#include <dt-bindings/zmk/outputs.h>
+
+
 #define DEFAULT 0
 #define NUMBER  1
 #define SYMBOL  2
