@@ -9,18 +9,18 @@
 # include:
 #   - board: bdn9_rev2
 #   - board: nice_nano_v2
-#     shield: reviung41
+#     shield: reviung41 snippet: nrf52840-nosd
 #
 ---
 include:
   - board: nice_nano_v2
-    snippet: nrf52840-nosd
+   
     shield: charybdis_nano_left
   - board: nice_nano_v2
-    snippet: nrf52840-nosd
+  
     shield: charybdis_nano_right
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    cmake-args: -DCONFIG_ZMK_STUDIO=y 
   - board: nice_nano_v2
     snippet: nrf52840-nosd
-    shield: settings_reset
+   
