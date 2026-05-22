@@ -118,4 +118,13 @@ charybdis_nano: charybdis_nano {
 
 };
 
+&spi0 {
+    trackball: trackball@0 {
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+        status = "disabled";
+    };
+};
+
+
 
