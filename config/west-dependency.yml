@@ -11,7 +11,7 @@ manifest:
       import: true
     - name: zmk
       import:
-        file: app/west.yml
+      file: app/west.yml
       clone-depth: 1
       revision: v0.3-branch+dya
     - name: zephyr
@@ -44,7 +44,7 @@ manifest:
     - name: zmk-module-ble-management
     - name: zmk-module-battery-history
     - name: zmk-module-runtime-input-processor
-    revision: e643dfe30754495c875b19097832378faed26f24
+      revision: e643dfe30754495c875b19097832378faed26f24
     - name: zmk-behavior-runtime-sensor-rotate
     - name: zmk-module-settings-rpc
   self:
