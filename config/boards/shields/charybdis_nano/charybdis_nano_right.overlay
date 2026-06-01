@@ -66,12 +66,12 @@
  input-processors = <&mouse_runtime_input_processor &scroll_runtime_input_processor>;
 
     scroll_slow {
-        layers = <1>;
+        layers = <2>;
         input-processors = <&zip_xy_scaler 1 2 &scroll_runtime_input_processor>;
     };
 
     snipe {
-        layers = <2>;
+        layers = <3>;
         input-processors = <&zip_xy_scaler 1 2 &mouse_runtime_input_processor>;
     };
     };
