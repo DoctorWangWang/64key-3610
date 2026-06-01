@@ -11,7 +11,7 @@ manifest:
       import: true
     - name: zmk
       import:
-      file: app/west.yml
+        file: app/west.yml
       clone-depth: 1
       revision: v0.3-branch+dya
     - name: zephyr
