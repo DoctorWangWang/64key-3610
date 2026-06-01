@@ -174,4 +174,8 @@
     axis-snap-threshold = <100>;
 };
 
+&trackball {
+    cpi = <1200>;
+};
+
 
