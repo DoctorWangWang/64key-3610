@@ -42,6 +42,7 @@ manifest:
     - name: zmk-driver-animation
     - name: zmk-driver-ext-power-transient
     - name: zmk-module-ble-management
+      revision: 851661cd21f2aded8ec649da86e01a207dc4b973
     - name: zmk-module-battery-history
     - name: zmk-module-runtime-input-processor
       revision: dbf92f764de8b6ffd60bf5850514302875fe2570
