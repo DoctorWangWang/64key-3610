@@ -44,7 +44,7 @@ manifest:
     - name: zmk-module-ble-management
     - name: zmk-module-battery-history
     - name: zmk-module-runtime-input-processor
-      revision: e643dfe30754495c875b19097832378faed26f24
+      revision: dbf92f764de8b6ffd60bf5850514302875fe2570
     - name: zmk-behavior-runtime-sensor-rotate
     - name: zmk-module-settings-rpc
   self:
