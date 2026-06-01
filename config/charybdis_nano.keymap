@@ -157,3 +157,23 @@
         };
     };
 };
+
+
+&mouse_runtime_input_processor {
+    temp-layer-enabled;
+    temp-layer = <2>;
+    temp-layer-activation-delay-ms = <200>;
+    temp-layer-deactivation-delay-ms = <400>; 
+};
+
+&scroll_runtime_input_processor {
+    active-layers = <BIT(1)>;
+    x-codes = <INPUT_REL_X>;
+    y-codes = <INPUT_REL_Y>;
+    xy-to-scroll-enabled;
+    axis-snap-threshold = <100>;
+};
+
+&trackball {
+    cpi = <1200>;
+};
