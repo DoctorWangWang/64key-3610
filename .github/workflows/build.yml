@@ -67,17 +67,12 @@ jobs:
           name: charybdis_nano
           path: artifacts
       - name: Create release
-  run: |
-    if [ -z "${{ github.event.inputs.release }}" ]; then
-      TAG="$(date +'%Y%m%d-%H%M%S')"
-    else
-      TAG="${{ github.event.inputs.release }}"
-    fi
-    gh release create "$TAG" \
-      --title "charybdis_nano firmware $TAG" \
-      --generate-notes \
-      --latest \
-      --target ${{ github.sha }} \
-      artifacts/*.uf2
-  env:
-    GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create ${{ github.event.inputs.release }} \
+            --title "charybdis_nano firmware ${{ github.event.inputs.release }}" \
+            --generate-notes \
+            --latest \
+            --target ${{ github.sha }} \
+            artifacts/*.uf2
+        env:
+          GH_TOKEN: ${{ github.token }}
