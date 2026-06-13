@@ -104,7 +104,7 @@ charybdis_nano: charybdis_nano {
 
 };
 
-&spi1 {
+&spi0 {
     trackball: trackball@0 {
         compatible = "cormoran,pmw3610";
         reg = <0>;
