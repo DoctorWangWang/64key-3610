@@ -104,7 +104,13 @@ charybdis_nano: charybdis_nano {
 
 };
 
-
+&spi1 {
+    trackball: trackball@0 {
+        compatible = "cormoran,pmw3610";
+        reg = <0>;
+        status = "disabled";
+    };
+};
 
 
 
