@@ -1,16 +1,13 @@
 #include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/runtime_input_processor.h>
+#include <dt-bindings/input/input-event-codes.h>
+#include <behaviors/runtime-input-processor.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/runtime_input_processor.h>
-#include <dt-bindings/input/input-event-codes.h>
-
-#include <behaviors/runtime-input-processor.dtsi>
-
 #include <dt-bindings/zmk/outputs.h>
-
+#include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT 0
 #define NUMBER  1
@@ -25,7 +22,6 @@
 
 / {
     behaviors {
-    
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "L_CLK";
@@ -33,6 +29,7 @@
             tapping-term-ms = <200>;
             bindings = <&mkp LCLK>, <&mkp LCLK>;
         };
+
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "M_CLK";
@@ -40,6 +37,7 @@
             tapping-term-ms = <200>;
             bindings = <&mkp MCLK>, <&mkp MCLK>;
         };
+
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "R_CLK";
@@ -48,9 +46,6 @@
             bindings = <&mkp RCLK>, <&mkp RCLK>;
         };
     };
-
- 
-
 
     combos {
         compatible = "zmk,combos";
@@ -127,7 +122,7 @@
             bindings = <
 &kp ESC  &kp N3       &kp F7  &kp F8  &kp F9  &kp F10  &bt BT_CLR    &kp N3        &kp N3       &kp N3  &bt BT_SEL 0  &bt BT_SEL 0
 &kp ESC  &sys_reset   &kp F4  &kp F5  &kp F6  &kp F11  &out OUT_USB  &none         &sys_reset   &none   &none         &none
-&kp ESC  &bootloader  &kp F1  &kp F2  &kp F3  &kp F12  &out OUT_BLE  &none         &bootloader  &none   &none         &none
+&kp ESC  &bootloader  &kp F1  &kp F2  &kp F3  &kp F12  &out OUT_BLE  &none         &bootloader  &none   &bootloader   &none
                       &none   &none   &none   &none    &none         &none         &none        &none
                       &none   &none   &none   &none    &kp NUMBER_3  &kp NUMBER_3  &mo 3        &mo 3
             >;
@@ -145,12 +140,11 @@
     };
 };
 
-
 &mouse_runtime_input_processor {
     temp-layer-enabled;
     temp-layer = <2>;
     temp-layer-activation-delay-ms = <200>;
-    temp-layer-deactivation-delay-ms = <400>; 
+    temp-layer-deactivation-delay-ms = <400>;
 };
 
 &scroll_runtime_input_processor {
@@ -160,6 +154,3 @@
     xy-to-scroll-enabled;
     axis-snap-threshold = <100>;
 };
-
-
-
