@@ -17,9 +17,9 @@ include:
     snippet: nrf52840-nosd
     shield: charybdis_nano_left
   - board: nice_nano_v2
-    snippet: studio-rpc-usb-uart
+    snippet: studio-rpc-usb-uart nrf52840-nosd
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-    snippet: nrf52840-nosd
+
     shield: charybdis_nano_right
   
   - board: nice_nano_v2
