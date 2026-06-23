@@ -13,11 +13,20 @@
 #define NUMBER  1
 #define SYMBOL  2
 #define HOTKEY  3
+#define 4  4
+
+
 
 &lt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <240>;
     flavor = "balanced";
-    quick-tap-ms = <170>;
+    quick-tap-ms = <150>;
+};
+
+&mt {
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+    quick-tap-ms = <150>;
 };
 
 / {
@@ -129,6 +138,7 @@
         };
 
         layer_4 {
+            label = "4";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
