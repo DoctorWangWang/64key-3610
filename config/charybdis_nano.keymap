@@ -13,7 +13,7 @@
 #define NUMBER  1
 #define SYMBOL  2
 #define HOTKEY  3
-#define 4  4
+#define MOUSE   4
 
 
 
@@ -137,8 +137,8 @@
             >;
         };
 
-        layer_4 {
-            label = "4";
+          mouse_layer {
+            label = "MOUSE";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -152,7 +152,7 @@
 
 &mouse_runtime_input_processor {
     temp-layer-enabled;
-    temp-layer = <2>;
+    temp-layer = <4>;
     temp-layer-activation-delay-ms = <200>;
     temp-layer-deactivation-delay-ms = <400>;
 };
