@@ -70,9 +70,9 @@
         input-processors = <&zip_xy_scaler 1 2 &scroll_runtime_input_processor>;
     };
 
-#     snipe {
-#         layers = <3>;
-  #       input-processors = <&zip_xy_scaler 1 2 &mouse_runtime_input_processor>;
- #    };
+   snipe {
+        layers = <3>;
+       input-processors = <&zip_xy_scaler 1 2 &mouse_runtime_input_processor>;
+ };
     };
 };
