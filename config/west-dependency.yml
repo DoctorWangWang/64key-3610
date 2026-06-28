@@ -38,22 +38,22 @@ manifest:
           - edtt
           - trusted-firmware-m
     - name: zmk-pmw3610-driver
-      revision: 274c92b
+      
     - name: zmk-feature-default-layer
-      revision: 5e3bf04
+      revision: zmk-v0.3.0.0
     - name: zmk-driver-animation
-      revision: 555f740
+      revision: zmk-v0.3.0.0
     - name: zmk-driver-ext-power-transient
-      revision: 92b00e3
+     
     - name: zmk-module-ble-management
-      revision: 851661c
+      revision: zmk-v0.3.0.0
     - name: zmk-module-battery-history
-      revision: 307755d
+      
     - name: zmk-module-runtime-input-processor
-      revision: dbf92f7
+      revision: zmk-v0.3.0.0
     - name: zmk-behavior-runtime-sensor-rotate
-      revision: 3bbd992
+     
     - name: zmk-module-settings-rpc
-      revision: ad1c995
+      
   self:
     path: config
