@@ -12,7 +12,7 @@
 #define DEFAULT 0
 #define NUMBER  1
 #define SYMBOL  2
-#define HOTKEY  3
+#define MOUSE  3
 
 &lt {
     tapping-term-ms = <200>;
@@ -121,7 +121,7 @@
         };
 
         hotkey_layer {
-            label = "HOTKEY";
+            label = "MOUSE";
             bindings = <
 &kp N3  &kp N3     &kp N3          &kp N3     &kp N3  &kp N3  &kp N3     &kp N3  &kp N3          &kp N3  &kp N3  &kp N3
 &none   &none      &msc SCRL_UP    &none      &none   &none   &none      &none   &none           &none   &none   &none
@@ -191,7 +191,7 @@
 
 &mouse_runtime_input_processor {
     temp-layer-enabled;
-    temp-layer = <2>;
+    temp-layer = <3>;
     temp-layer-activation-delay-ms = <200>;
     temp-layer-deactivation-delay-ms = <400>;
 };
