@@ -22,6 +22,6 @@ include:
  
  
   - board: nice_nano_v2
-    snippet: nrf52840-nosd
+   #    snippet: nrf52840-nosd
     shield: settings_reset
    
