@@ -71,7 +71,7 @@
 
         combo_LSH {
             timeout-ms = <50>;
-            key-positions = <14 15>;
+            key-positions = <>;
             bindings = <&kp LSHFT>;
         };
 
